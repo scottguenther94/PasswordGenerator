@@ -1,0 +1,54 @@
+:root {
+    --light: #EEE;
+    --dark: navy;
+    --medium: gray; 
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+}
+h1 {
+    color: var(--light);
+    background-color: var(--dark);
+    text-align: center;
+}
+#password {
+    height: 15vw;
+    width: 40vw;
+    text-align: center;
+    background-color: var(--medium);
+    color:#FFF;
+}
+#random-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    
+}
+#length {
+    height: 2em;
+    width:3em;
+    background-color: var(--medium);
+    color:#FFF;
+}
+#copy {
+    height:2em;
+    width: 5em;
+    background-color: var(--dark);
+    color:#FFF;
+}
+#generate {
+    background-color:var(--dark);
+    color:#FFF;
+    position: relative;
+}
+#length, #upper, #numbers, #symbols, #generate {
+    margin:10px;
+}
