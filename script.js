@@ -1,26 +1,24 @@
-// Password Generator JS Code
-var lowerCharacters = ["abcdefghijklmnopqrstuvwxyz"];
-var upperCharacters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var numbers = ["0123456789"];
-var symbols = ["!@#$%^&*_-+="];
+//Code copied, pasted, and modified from W3 Collective
 
-var passwordTxt = document.getElementById("password");
-var incUpper = document.getElementById("upper");
-var incNumbers = document.getElementById("numbers");
-var incSymbols = document.getElementById("symbols");
-var generateBtn = document.getElementById("generate");
-var length = prompt("Enter a number from 8 to 128");
+//Characters to be allowed in Password Generator 
+const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*_-+=";
 
-// Button click event, instructions for which characters to use
+//
+const passwordTxt = document.getElementById("password");
+const length = document.getElementById("length");
+const incNumbers = document.getElementById("numbers");
+const incSymbols = document.getElementById("symbols");
+const generateBtn = document.getElementById("generate");
+
 generateBtn.addEventListener("click", () => {
-    let characters = lowerCharacters;
-    incUpper.checked ? (characters += upperCharacters) : "";
+    let characters = alpha;
     incNumbers.checked ? (characters += numbers) : "";
     incSymbols.checked ? (characters += symbols) : "";
     passwordTxt.value = generatePassword(length.value, characters);
   });
-// For loop to randomly assign characters and generate password
-  var generatePassword = (length, characters) => {
+  const generatePassword = (length, characters) => {
     let password = "";
     for (let i = 0; i < length; i++) {
       password += characters.charAt(
@@ -29,8 +27,7 @@ generateBtn.addEventListener("click", () => {
     }
     return password;
   };
-// Copy Password feature
-var copyBtn = document.getElementById("copy");
+  const copyBtn = document.getElementById("copy");
 copyBtn.addEventListener("click", () => {
   passwordTxt.select();
   document.execCommand("copy");
