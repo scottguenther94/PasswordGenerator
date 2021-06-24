@@ -1,3 +1,4 @@
+/* CSS Stylesheet for Password Generator*/
 :root {
     --light: #EEE;
     --dark: navy;
@@ -19,6 +20,13 @@ h1 {
     background-color: var(--medium);
     color:#FFF;
 }
+#copy {
+    height:2em;
+    width: 5em;
+    background-color: var(--dark);
+    color:#FFF;
+}
+/* Centers and organizes length and character options */
 #random-password {
     display: flex;
     flex-direction: column;
@@ -32,22 +40,20 @@ h1 {
     top: 50px;
     
 }
+/* Style and further organziation of selections*/
 #length {
     height: 2em;
     width:3em;
     background-color: var(--medium);
     color:#FFF;
 }
-#copy {
-    height:2em;
-    width: 5em;
-    background-color: var(--dark);
-    color:#FFF;
-}
+
 #generate {
     background-color:var(--dark);
     color:#FFF;
     position: relative;
+    height:40px;
+    width:200px;
 }
 #length, #upper, #numbers, #symbols, #generate {
     margin:10px;
